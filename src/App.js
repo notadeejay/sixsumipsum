@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -11,48 +10,47 @@ class App extends Component {
       number: '',
       ipsum:'',
       words: [
-        'Turrono',
-        'the 6ix',
+        'turrono',
+        'In the 6ix.',
         'Drake',
         'Parkdale',
-        'I never go east of Spadina',
-        'I read it in BlogTO',
+        'I never go east of Spadina.',
+        'I read it in BlogTO.',
         'Bar Raval',
         'Leslieville',
         'Queen West',
         'King West',
         'Sorry, gonna be late. The TTC is delayed.',
-        'I need to transfer at Bloor',
+        'I need to transfer at Bloor.',
         'Wanna get brunch?',
-        'the vomit comet',
+        'Riding the vomit comet.',
         '905ers',
-        'the sufferin Dufferin',
-        'the Dufferin mall',
+        'The sufferin Dufferin',
+        'The Dufferin Mall',
         'I still call it the Skydome.',
         'Scarberia',
-        'the T dot',
+        'The T Dot',
         'North of Bloor',
         'NOB',
         'YYZ',
         'Don Valley Parking lot',
-        'racoons',
-        'the white squirrel',
+        'Racoons',
+        'The white squirrel',
         'Honest Eds',
         'Wanna go to Bellwoods?',
-        'the CN tower',
-        'the 504',
-        'the 501',
+        'The CN tower',
+        'The 504',
+        'The 501',
         '416',
-        'I got it on Bunz',
+        'Thanks! I got it on Bunz.',
         'Turrana',
-        'That night in Turrono',
+        'That night in Turrono.',
         'Kensington Market',
         'I got these sunglasses in Kensington.',
-        'true facts',
-        'City Place',
-        'eye contact on the Subway',
+        'I live in City Place.',
+        'Avoiding eye contact on the Subway.',
         'Toronto vs. Everybody',
-        'Home is Toronto',
+        'Home is Toronto.',
         'cold tea',
         'the Brunny',
         'you\'ve changed',
@@ -109,7 +107,7 @@ class App extends Component {
         'Street meat',
         'BELIEVE!',
         'peameal bacon sandwiches',
-        'NOBODY',
+        'NOOOOBODY',
         'Oliver\'s jewellery',
         'Bathurst Station Jamaican patties',
         'patio season',
@@ -161,6 +159,8 @@ class App extends Component {
         '647',
         'Gale\'s Snackbar',
         'Ed\'s Real Scoop',
+        'Peter Parkour',
+        'Zanta'
       ]
     })
 
@@ -185,15 +185,18 @@ class App extends Component {
     return words;
   }
 
-  buildParagraph = () => {
+  buildParagraph = (num) => {
     let ipsum = [];
-  
-    while ( ipsum.length < 5 ) { 
+    console.log(num)
+    while ( ipsum.length < num ) { 
       ipsum.push(this.randomParagraph()); 
+      ipsum[0].charAt(0).toUpperCase()
+     
     }
       this.setState ({
         ipsum: `<p> ${ipsum} </p>`,
       })
+
     }
 
     handleChange(event) {
@@ -202,28 +205,35 @@ class App extends Component {
   
     handleSubmit(event) {
       event.preventDefault();
-      this.buildParagraph(event.target.value)
+      console.log(this.state.value)
+      this.buildParagraph(this.state.value)
     }
 
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+
+        <div className="left-bar">
           <h1 className="App-title">Hello</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <form onSubmit={this.handleSubmit}>
-        <label>
+        </div>
+
+        <div className ="right-bar">
+        <form className="paragraph-form" onSubmit={this.handleSubmit}>
+        <p>
           How many paragraphs:
-          <input type="number" value={this.state.value} onChange={this.handleChange} />
-        </label>
+        </p>
+          <select value={this.state.value} onChange={this.handleChange}>
+            <option value='1'>1 PARAGRAPH</option>
+            <option value='2'>2 PARAGRAPHS</option>
+            <option value='3'>3 PARAGRAPHS</option>
+            <option value='4'>4 PARAGRAPHS</option>
+          </select>
         <input type="submit" value="Submit" />
       </form>
-        <p>{this.state.ipsum}</p>
+        <p className="ipsum">{this.state.ipsum}</p>
+      </div>
+
       </div>
     );
   }

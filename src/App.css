@@ -1,28 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:300');
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
-.App-header {
+.left-bar {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
+  width: 50%;
+  height: 800px;
+}
+
+.right-bar {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ipsum {
+  padding: 20px;
+  text-align: left
 }
 
 .App-title {
   font-size: 1.5em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
-.App-intro {
-  font-size: large;
-}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+
