@@ -4,29 +4,41 @@
   text-align: center;
   display: flex;
   flex-direction: row;
+  font-family: 'Raleway', sans-serif;
+  background-color: white;
 }
 
 
 .left-bar {
-  background-color: #222;
+  background-color: #E7ECEF;
   height: 150px;
   padding: 20px;
   color: white;
-  width: 50%;
+  width: 45%;
   height: 800px;
 }
 
+.left-bar h1 {
+  font-size: 10em;
+}
 .right-bar {
-  width: 50%;
+  width: 55%;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.paragraphs {
+  padding: 30px;
+}
+
 .ipsum {
-  padding: 20px;
   text-align: left
+}
+
+.ipsum:first-letter {
+  text-transform: uppercase;
 }
 
 .App-title {
