@@ -244,7 +244,6 @@ class App extends Component {
         <h2>
            Keys To the City
         </h2>
-        <span className="divider"></span>
         <div className="select-style">
           <select value={this.state.value} onChange={this.handleChange}>
             <option value='1'>1 PARAGRAPH</option>

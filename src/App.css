@@ -59,7 +59,7 @@ html, body {
 
 .right-bar {
   width: 55%;
-  padding: 100px 120px 0 120px;
+  padding: 100px 100px 0 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,12 +86,12 @@ html, body {
 
 
 .paragraphs {
-  padding: 0 60px;
+  padding: 0 20px;
 }
 
 .ipsum {
   text-align: left;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: 300;
 }
 
@@ -99,20 +99,12 @@ html, body {
   text-transform: uppercase;
 }
 
-
-.divider {
-  height: 2px;
-  width: 80px;
-  background: #1b5886;
-  display: block;
-  margin: 40px auto
-}
 .select-style {
   background: url('http://khaledipsum.com/img/caret.svg') no-repeat right 14px center;
   border: 1px solid #C7C7C7;
   width: 210px;
   height: 40px;
-  margin-top: 20px;
+  margin-top: 40px;
   padding: 0;
   margin: 0 auto 40px auto;
 }
