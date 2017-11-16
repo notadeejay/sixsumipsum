@@ -221,13 +221,13 @@ class App extends Component {
       <div className="App">
 
         <div className="left-bar">
-          <h1 className="App-title">6ixum Ipsum</h1>
+          <h1 className="App-title">Sixum Ipsum</h1>
         </div>
 
         <div className ="right-bar">
        <p className="generate">GENERATE</p>
         <h2>
-          Key (words) To the City
+           Key (words) To the City 
         </h2>
         <span className="divider"></span>
         <div className="select-style">
