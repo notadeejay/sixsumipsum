@@ -59,7 +59,7 @@ html, body {
 
 .right-bar {
   width: 55%;
-  padding: 100px 100px 0 100px;
+  padding: 50px 100px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,9 +104,8 @@ html, body {
   border: 1px solid #C7C7C7;
   width: 210px;
   height: 40px;
-  margin-top: 40px;
+  margin: 20px 0;
   padding: 0;
-  margin: 0 auto 40px auto;
 }
 
 select {
