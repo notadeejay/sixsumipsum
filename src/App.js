@@ -234,14 +234,15 @@ class App extends Component {
       <div className="App">
 
         <div className="left-bar">
+          <div>
           <h1 className="App-title">Sixum Ipsum</h1>
-          <p> 📸 Image by <a href="http://www.danielehrenworth.com/">Daniel Ehrenworth</a> via <a href="https://torontolife.com/city/toronto-politics/norm-kelly-the-norm-show/">Toronto Life</a></p>
+          </div>
         </div>
 
         <div className ="right-bar">
        <p className="generate">GENERATE</p>
         <h2>
-           Key (words) To the City 
+           Keys To the City
         </h2>
         <span className="divider"></span>
         <div className="select-style">
@@ -262,9 +263,6 @@ class App extends Component {
       </div>
     
       </div>
-      <footer>
-        <p className="made-by">made with 🍕 by <a href="https://twitter.com/ae_mansell">@ae_mansell</a></p>
-    </footer>
     </div>
       
     );
