@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = ({
-      number: '',
+      value: 1,
       ipsum: [],
       words: [
         'turrono',
@@ -186,7 +186,7 @@ class App extends Component {
   randomQuote = () => this.state.words[Math.floor(Math.random() * this.state.words.length)]
   
   randomParagraph = () => {
-    let num = Math.floor(Math.random() * (25 - 5 + 1) + 20),
+    let num = Math.floor(Math.random() * (25 - 5 + 1) + 25),
     words = ''
   
     for (var i = 0; i < num; i++) {
@@ -240,6 +240,7 @@ class App extends Component {
         <input type="submit" value="Submit" />
       </form>
       <div className="paragraphs">
+    
       {this.state.ipsum.map((pg) => {
       return <p className="ipsum">{pg}</p>
         })
