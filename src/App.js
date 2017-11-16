@@ -179,6 +179,7 @@ class App extends Component {
     this.randomQuote = this.randomQuote.bind(this)
     this.buildParagraph = this.buildParagraph.bind(this)
     this.handleChange = this.handleChange.bind(this);
+    this.capitalizeFirstLetter = this.capitalizeFirstLetter.bind(this);
    
   }
   
@@ -202,26 +203,39 @@ class App extends Component {
     let ipsum = [];
     
     while ( ipsum.length < num ) { 
-      ipsum.push(`<p> ${this.randomParagraph()} </p>`); 
+      ipsum.push(this.randomParagraph()); 
     }
-      this.setState({
-        ipsum: ipsum,
+     this.capitalizeFirstLetter(ipsum)
+    }
+
+
+    capitalizeFirstLetter = (arr) => {
+     
+      for(var i = 0 ; i < 1 ; i++) {
+        arr[0] = arr[0].charAt(0).toUpperCase() +  arr[0].substr(1);
+      }       
+      this.setState ({
+        ipsum: arr,
       })
-      console.log(this.state.ipsum)
     }
 
     handleChange(event) {
       this.buildParagraph(event.target.value)
+      this.setState({
+        value: event.target.value,
+      })
     }
   
 
 
   render() {
     return (
+    <div className="container">
       <div className="App">
 
         <div className="left-bar">
           <h1 className="App-title">Sixum Ipsum</h1>
+          <p> 📸 Image by <a href="http://www.danielehrenworth.com/">Daniel Ehrenworth</a> via <a href="https://torontolife.com/city/toronto-politics/norm-kelly-the-norm-show/">Toronto Life</a></p>
         </div>
 
         <div className ="right-bar">
@@ -246,8 +260,13 @@ class App extends Component {
       }
       </div>
       </div>
-
+    
       </div>
+      <footer>
+        <p className="made-by">made with 🍕 by <a href="https://twitter.com/ae_mansell">@ae_mansell</a></p>
+    </footer>
+    </div>
+      
     );
   }
 }

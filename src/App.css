@@ -18,11 +18,22 @@
   padding: 20px;
   color: white;
   width: 45%;
-  height: 780px;
+  height: 850px;
   border: 8px solid #afafb4;
   margin: 20px;
   display: flex;
   align-items: center;
+  flex-direction: column;
+}
+
+.left-bar p {
+  margin-top: 230px;
+  color: #bd233a;
+}
+
+.left-bar a {
+  text-decoration: none;
+  color: #bd233a;
 }
 
 .left-bar h1 {
@@ -109,6 +120,29 @@ select {
   font-weight: 700;
 }
 
+.made-by {
+  font-family: 'Oswald', sans-serif; 
+  color: #afafb4;
+  text-transform: uppercase;
+  margin: 0 20px 0 20px;
+}
+
+.made-by a {
+  text-decoration: none;
+  color: #afafb4;
+
+}
+
+footer {
+  height: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 
 
 
