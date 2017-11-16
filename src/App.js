@@ -15,7 +15,7 @@ class App extends Component {
         'drake',
         'parkdale',
         'east of Spadina',
-        'blogTO.',
+        'blogTO',
         'bar raval',
         'leslieville',
         'queen west',
@@ -27,7 +27,7 @@ class App extends Component {
         '905ers',
         'sufferin dufferin',
         'the dufferin mall',
-        'I still call it the Skydome.',
+        'I still call it the Skydome',
         'scarberia',
         't-dot',
         'north of bloor',
@@ -46,16 +46,16 @@ class App extends Component {
         'turrana',
         'that night in turrono',
         'kensington market',
-        'sunglasses in kensington.',
+        'sunglasses in kensington',
         'city place',
         'subway eye contact',
         'toronto vs. everybody',
         'home is toronto',
         'cold tea',
         'brunny',
-        'you\'ve changed,',
-        '3 AM at the lakeview.',
-        'lineup at BangBang ice cream.',
+        'you\'ve changed',
+        '3 AM at the lakeview',
+        'lineup at BangBang ice cream',
         'ritual',
         'shopify',
         'stolen bikes',
@@ -146,9 +146,9 @@ class App extends Component {
         'muchmusic veejay',
         'electric circus',
         'CP24 car',
-        'attention all passengers on line 1.',
+        'attention all passengers on line 1',
         'RC harris water treatment plant',
-        'pronunciation of spadina.',
+        'pronunciation of spadina',
         'strachan',
         '647',
         'gale\'s snackbar',
@@ -179,9 +179,12 @@ class App extends Component {
     this.randomQuote = this.randomQuote.bind(this)
     this.buildParagraph = this.buildParagraph.bind(this)
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+   
   }
-
+  
+  componentDidMount() {
+    this.buildParagraph(this.state.value)
+  }
 
   randomQuote = () => this.state.words[Math.floor(Math.random() * this.state.words.length)]
   
@@ -192,15 +195,14 @@ class App extends Component {
     for (var i = 0; i < num; i++) {
        words += (this.randomQuote() + ' ') 
     }
-  
-    return words;
+    return words
   }
 
   buildParagraph = (num) => {
     let ipsum = [];
-     console.log(num)
+    
     while ( ipsum.length < num ) { 
-      ipsum.push(this.randomParagraph()); 
+      ipsum.push(`<p> ${this.randomParagraph()} </p>`); 
     }
       this.setState({
         ipsum: ipsum,
@@ -209,13 +211,9 @@ class App extends Component {
     }
 
     handleChange(event) {
-      this.setState({value: event.target.value});
+      this.buildParagraph(event.target.value)
     }
   
-    handleSubmit(event) {
-      event.preventDefault();
-      this.buildParagraph(this.state.value)
-    }
 
 
   render() {
@@ -223,22 +221,23 @@ class App extends Component {
       <div className="App">
 
         <div className="left-bar">
-          <h1 className="App-title">6IXUM IPSUM</h1>
+          <h1 className="App-title">6ixum Ipsum</h1>
         </div>
 
         <div className ="right-bar">
-        <form className="paragraph-form" onSubmit={this.handleSubmit}>
-        <p>
-          How many paragraphs:
-        </p>
+       <p className="generate">GENERATE</p>
+        <h2>
+          Key (words) To the City
+        </h2>
+        <span className="divider"></span>
+        <div className="select-style">
           <select value={this.state.value} onChange={this.handleChange}>
             <option value='1'>1 PARAGRAPH</option>
             <option value='2'>2 PARAGRAPHS</option>
             <option value='3'>3 PARAGRAPHS</option>
             <option value='4'>4 PARAGRAPHS</option>
           </select>
-        <input type="submit" value="Submit" />
-      </form>
+        </div>
       <div className="paragraphs">
     
       {this.state.ipsum.map((pg) => {
