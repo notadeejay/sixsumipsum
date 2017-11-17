@@ -199,7 +199,7 @@ class App extends Component {
         'sugar and carlos',
         'the cash man',
         'pop up video',
-        
+
 
       ]
     })
@@ -288,6 +288,7 @@ class App extends Component {
         })
       }
       </div>
+      <p className="made-by"><a href="https://twitter.com/ae_mansell">BUILT WITH 🍕 BY @AE_MANSELL</a></p>
       </div>
     
       </div>

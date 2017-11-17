@@ -122,22 +122,22 @@ select {
   background: none;
   outline: none;
   text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;  
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   line-height: 40px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
-.made-by {
-  font-family: 'Oswald', sans-serif; 
-  color: #afafb4;
-  text-transform: uppercase;
-  margin: 0 20px 0 20px;
-}
+
 
 .made-by a {
   text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
   color: #afafb4;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 0 20px 0 20px;
 
 }
 
