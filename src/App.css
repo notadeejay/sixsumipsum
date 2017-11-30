@@ -57,6 +57,8 @@ html, body {
   animation: scaleIn 1s;
 }
 
+
+ 
 .right-bar {
   width: 55%;
   padding: 50px 100px 30px;
@@ -152,5 +154,78 @@ footer {
 }
 
 
+@media screen and (max-width: 900px){
 
+ 
+
+  .left-bar h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 110px;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+    width: 100%;
+    text-align: center;
+    animation: scaleIn 1s;
+  }
+
+  .right-bar {
+    width: 100%;
+  } 
+
+  .App {
+  display: block;
+    
+  }
+
+  .left-bar {
+    max-width: none;
+    height: 100vh;
+    background-position: center;
+    transition: 0.2s;
+  }
+
+  .left-bar div {
+    border: 8px solid rgba(255, 255, 255, 0.9);
+    align-items: center;
+    padding: 10px;
+  }
+}
+
+
+@media screen and (max-width: 500px){
+  
+  
+    .right-bar {
+      width: 100%;
+      padding: 40px;
+    } 
+
+    .right-bar h2 {
+      font-size: 2.5em;
+    }
+
+    .generate {
+      font-size: 1em;
+    }
+  
+    .App {
+    display: block;
+      
+    }
+
+    .paragraphs {
+      padding: 0 20px;
+      line-height: 1em;
+    }
+    
+    .ipsum {
+      text-align: left;
+      font-size: 1em;
+      font-weight: 300;
+    }
+  
+    
+  }
 
